@@ -102,28 +102,15 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-#
-#
-# neovim binary
 export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
-# jetbrains
-export PATH="$PATH:/home/pras/.local/share/JetBrains/Toolbox/apps/pycharm/bin/"
+export PATH="$PATH:/usr/local/go/bin"
 
-. "$HOME/.local/bin/env"
-
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-
-# pyenv
 export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init - zsh)"
+eval "$(pyenv init - bash)"
 
 eval "$(pyenv virtualenv-init -)"
 
-# pnpm
-export PNPM_HOME="/home/pras/.local/share/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
-# pnpm end
+# Created by `pipx` on 2026-02-18 17:46:55
+export PATH="$PATH:/home/pras/.local/bin"
+eval "$(register-python-argcomplete pipx)"
