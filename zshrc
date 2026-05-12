@@ -114,3 +114,5 @@ eval "$(pyenv virtualenv-init -)"
 # Created by `pipx` on 2026-02-18 17:46:55
 export PATH="$PATH:/home/pras/.local/bin"
 eval "$(register-python-argcomplete pipx)"
+
+export PATH="$PATH:$HOME/scripts"
